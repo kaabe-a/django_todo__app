@@ -4,4 +4,5 @@
 I have created this django to test my django or my web devloping experiance
 
 ###### features
-- [x] CRUD (create, delete, update, read)
+- [x] Add CRUD opration #2
+- [x] Complete Testing of models and views #4
