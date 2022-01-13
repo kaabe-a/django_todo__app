@@ -26,3 +26,19 @@ cd django_todo__app
 pip install -r requirements.txt
 ```
 
+#### Make database migrations
+```
+python manage.py makemigrations
+```
+
+#### Make database migrate
+```
+python manage.py migrate
+```
+
+#### Run the project
+```
+python manage.py runserver
+```
+
+### Enjoy :green_heart:
