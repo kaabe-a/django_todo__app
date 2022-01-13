@@ -1,7 +1,7 @@
 # Django Todo App
 #### hi am mahamud junior full stack web developer
 
-I have created this django to test my django or my web devloping experiance
+I have created this django project (django_todo__app) to test my django or my web development experiance
 
 ##### features
 - [x] Add CRUD opration
