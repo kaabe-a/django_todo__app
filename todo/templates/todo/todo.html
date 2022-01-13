@@ -1,19 +1,35 @@
 {%extends 'base/base.html'%}
 
 {%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form class="d-flex flex-row mb-5" method="get" action="{%url 'todo:todo_list'%}">
+                <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for todo in todos%}
+                    <tr>
+                        <td><a href="{{ todo.get_absolute_url}}"> {{todo.title}}</a> </td>
+                        <td> <a class="btn btn-danger" href="{{todo.get_absolute_url}}delete/">delete</a> </td>
+                        <td> <a class="btn btn-info" href="{{todo.get_absolute_url}}update/">update</a> </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
 
-<table class="table table-responsive">
-    <tr>
-        <th>title</th>
-        <th>delete</th>
-        <th>update</th>
-    </tr>
-    {%for todo in todos%}
-    <tr>
-        <td><a href="{{ todo.get_absolute_url}}"> {{todo.title}}</a> </td>
-        <td> <a href="{{todo.get_absolute_url}}delete/">delete</a> </td>
-        <td> <a href="{{todo.get_absolute_url}}update/">update</a> </td>
-    </tr>
-    {%endfor%}
-</table>
+            </table>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
 {%endblock%}

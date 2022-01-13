@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     
+    "crispy_forms",
     'todo',
 ]
-
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 

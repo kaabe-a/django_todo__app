@@ -3,9 +3,33 @@ from . models import Todo
 from . forms import TodoForm
 from django.urls import reverse
 from django.contrib import messages
+from django.db.models import Q
+
+# def search_todo(request):
+   
+#     print(q)
+#     if q:
+#         todos = Todo.objects.filter(
+#         Q(title__contains=q) | Q(description__contains=q)
+#         )
+#         print(todos)
+#     else:
+#         todos = Todo.objects.all()
+#     context = {
+#         'todos':todos
+#     }
+#     return render(request,'todo/todo.html',context)
+
 
 def todo_list_view(request):
-    todos = Todo.objects.all()
+    query = request.GET.get('search')
+    if query:
+        todos = Todo.objects.filter(
+        Q(title__contains=query) | Q(description__contains=query)
+        )
+        print(todos)
+    else:
+        todos = Todo.objects.all()
     context = {
         'todos':todos
     }

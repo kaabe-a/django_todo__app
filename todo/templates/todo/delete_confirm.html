@@ -1,8 +1,17 @@
 {%extends 'base/base.html'%}
 {%block content%}
-   <form action="" method="post">
-       {%csrf_token%}
-       <h3>are you sure you want to delete {{todo.title}} ? </h3>
-       <input type="submit">
-   </form>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="" method="post">
+                {%csrf_token%}
+                <h4>are you sure you want to delete {{todo.title}} ? </h4>
+                <input class="btn btn-success" type="submit">
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+
+    </div>
+</div>
 {%endblock%}
