@@ -7,7 +7,7 @@ I have created this django to test my django or my web devloping experiance
 - [x] Add CRUD opration
 - [x] Complete Testing of models and views
 - [x] Search Functionality
-- [] Add authentication
+- [ ] Add authentication
 
 #### To Clone
 
